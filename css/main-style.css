@@ -1219,7 +1219,6 @@ body {
 .timeline {
     margin-top: 30px;
     height: 800px;
-    border: 1px solid #000;
 }
 
 .timeline h2 {
@@ -1227,7 +1226,6 @@ body {
     font-size: 50px;
     text-align: center;
     margin: 20px;
-    margin-top: 50px;
     position: relative;
 }
 
@@ -1235,8 +1233,9 @@ body {
     content: "";
     position: absolute;
     top: 52px;
-    left: 359px;
-    background-color: var(--second-color);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var( --second-color);
     width: 390px;
     height: 2px;
 }
@@ -1259,42 +1258,54 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    border: 1px solid #000;
+    position: relative;
 }
 
 .timeline .careers .career {
     position: relative;
-    /* border: 1px solid #000; */
     width: 100%;
 }
 
-.timeline .careers .career .down-arrow {
-    width: 12px;
-    height: 100px;
-    background-color: red;
+.timeline .careers .d-2004 img,
+.timeline .careers .d-2008 img,
+.timeline .careers .d-2013 img {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    clip-path: polygon(50% 7%, 100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
-    margin-top: -7px;
+    top: 10px;
+    right: 40px;
+    height: 112px;
 }
+
+.timeline .careers .d-2006 img,
+.timeline .careers .d-2009 img,
+.timeline .careers .d-2020 img {
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    height: 112px;
+}
+
 
 .timeline .careers .career .l-circle {
     width: 24px;
     height: 24px;
     background-color: #fff;
-    border: 3px solid red;
     border-radius: 50%;
     position: absolute;
-    top: 70%;
+    top: 44px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+.timeline .careers .d-2004 .l-circle {border: 3px solid #FF00AA;}
+.timeline .careers .d-2006 .l-circle {border: 3px solid #5200FF;}
+.timeline .careers .d-2008 .l-circle {border: 3px solid #FF7312;}
+.timeline .careers .d-2009 .l-circle {border: 3px solid #2EE321;}
+.timeline .careers .d-2013 .l-circle {border: 3px solid #B400E6;}
+.timeline .careers .d-2020 .l-circle {border: 3px solid #00DEFF;}
+
 .timeline .careers .career .l-circle .s-circle {
     width: 12px;
     height: 12px;
-    background-color: red;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -1302,14 +1313,44 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.timeline .careers .d-2004 .l-circle .s-circle {background-color: #FF00AA;}
+.timeline .careers .d-2006 .l-circle .s-circle {background-color: #5200FF;}
+.timeline .careers .d-2008 .l-circle .s-circle {background-color: #FF7312;}
+.timeline .careers .d-2009 .l-circle .s-circle {background-color: #2EE321;}
+.timeline .careers .d-2013 .l-circle .s-circle {background-color: #B400E6;}
+.timeline .careers .d-2020 .l-circle .s-circle {background-color: #00DEFF;}
+
+
 .timeline .careers .career .line {
-    width: 120px;
+    width: 160px;
     height: 1px;
-    background-color: red;
     position: absolute;
-    top: 13px;
-    left: 546px;
 }
+
+.timeline .careers .d-2004 .line {background-color: #FF00AA;}
+.timeline .careers .d-2006 .line {background-color: #5200FF;}
+.timeline .careers .d-2008 .line {background-color: #FF7312;}
+.timeline .careers .d-2009 .line {background-color: #2EE321;}
+.timeline .careers .d-2013 .line {background-color: #B400E6;}
+.timeline .careers .d-2020 .line {background-color: #00DEFF;}
+
+.timeline .careers .d-2004 .line,
+.timeline .careers .d-2008 .line,
+.timeline .careers .d-2013 .line {
+    top: 44px;
+    left: 50%;
+    transform: translateX(-18%);
+}
+
+.timeline .careers .d-2006 .line,
+.timeline .careers .d-2009 .line,
+.timeline .careers .d-2020 .line {
+    top: 44px;
+    right: 50%;
+    transform: translateX(18%);
+}
+
+
 
 .timeline .careers .career .line::before {
     content: "";
@@ -1323,11 +1364,18 @@ body {
     border-radius: 50%;
 }
 
+.timeline .careers .d-2004 .line::before {background-color: #FF00AA;}
+.timeline .careers .d-2006 .line::before {background-color: #5200FF;}
+.timeline .careers .d-2008 .line::before {background-color: #FF7312;}
+.timeline .careers .d-2009 .line::before {background-color: #2EE321;}
+.timeline .careers .d-2013 .line::before {background-color: #B400E6;}
+.timeline .careers .d-2020 .line::before {background-color: #00DEFF;}
+
+
 .timeline .careers .career .line::after {
     content: "";
     width: 10px;
     height: 10px;
-    background-color: red;
     position: absolute;
     top: 50%;
     right: -5px;
@@ -1335,22 +1383,133 @@ body {
     border-radius: 50%;
 }
 
-.timeline .careers .career .date {
+.timeline .careers .d-2004 .line::after {background-color: #FF00AA;}
+.timeline .careers .d-2006 .line::after {background-color: #5200FF;}
+.timeline .careers .d-2008 .line::after {background-color: #FF7312;}
+.timeline .careers .d-2009 .line::after {background-color: #2EE321;}
+.timeline .careers .d-2013 .line::after {background-color: #B400E6;}
+.timeline .careers .d-2020 .line::after {background-color: #00DEFF;}
+
+.timeline .careers .career .line .date {
     position: absolute;
-    top: 45%;
-    left: 35%;
-    font-size: 25px;
-    font-weight: bold;
+    top: -20px;
+    font-size: 30px;
+    font-weight: 400;
     color: red;
 }
 
-.timeline .careers .career .career-text {
+.timeline .careers .d-2004 .line .date {color: #FF00AA;}
+.timeline .careers .d-2006 .line .date {color: #5200FF;}
+.timeline .careers .d-2008 .line .date {color: #FF7312;}
+.timeline .careers .d-2009 .line .date {color: #2EE321;}
+.timeline .careers .d-2013 .line .date {color: #B400E6;}
+.timeline .careers .d-2020 .line .date {color: #00DEFF;}
+
+.timeline .careers .d-2004 .line .date,
+.timeline .careers .d-2008 .line .date,
+.timeline .careers .d-2013 .line .date {
+    right: 170px;
+}
+
+.timeline .careers .d-2006 .line .date,
+.timeline .careers .d-2009 .line .date,
+.timeline .careers .d-2020 .line .date {
+    left: 170px;
+}
+
+.timeline .careers .career .line .career-text {
     position: absolute;
-    top: 0px;
-    right: 223px;
-    color: red;
+    top: -21px;
     width: 250px;
 }
 
+.timeline .careers .d-2004 .line .career-text,
+.timeline .careers .d-2008 .line .career-text,
+.timeline .careers .d-2013 .line .career-text {
+    left: 175px;
+}
+.timeline .careers .d-2006 .line .career-text,
+.timeline .careers .d-2009 .line .career-text,
+.timeline .careers .d-2020 .line .career-text {
+    right: 162px;
+}
+
+
+.timeline .careers .career .line .career-text h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.timeline .careers .d-2004 .line .career-text h4 {color: #FF00AA;}
+.timeline .careers .d-2006 .line .career-text h4 {color: #5200FF;}
+.timeline .careers .d-2008 .line .career-text h4 {color: #FF7312;}
+.timeline .careers .d-2009 .line .career-text h4 {color: #2EE321;}
+.timeline .careers .d-2013 .line .career-text h4 {color: #B400E6;}
+.timeline .careers .d-2020 .line .career-text h4 {color: #00DEFF;}
+
+.timeline .careers .career .line .career-text h4::before {
+    content: "";
+    width: 246px;
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    top: 21px;
+    left: -4px;
+}
+
+.timeline .careers .d-2004 .line .career-text h4:before {background-color: #FF00AA;}
+.timeline .careers .d-2006 .line .career-text h4:before {background-color: #5200FF;}
+.timeline .careers .d-2008 .line .career-text h4:before {background-color: #FF7312;}
+.timeline .careers .d-2009 .line .career-text h4:before {background-color: #2EE321;}
+.timeline .careers .d-2013 .line .career-text h4:before {background-color: #B400E6;}
+.timeline .careers .d-2020 .line .career-text h4:before {background-color: #00DEFF;}
+
+.timeline .careers .career .line .career-text p {
+    line-height: 1.4;
+    color: #bdbdbd;
+}
+
+.timeline .careers .career .down-arrow {
+    width: 12px;
+    height: 110px;
+    position: absolute;
+    left: 50%;
+    top: -3px;
+    transform: translateX(-50%);
+    clip-path: polygon(50% 6%, 100% 0, 100% 94%, 50% 100%, 0 94%, 0 0);
+}
+
+.timeline .careers .d-2004 .down-arrow {background-color: #FF00AA;}
+.timeline .careers .d-2006 .down-arrow {background-color: #5200FF;}
+.timeline .careers .d-2008 .down-arrow {background-color: #FF7312;}
+.timeline .careers .d-2009 .down-arrow {background-color: #2EE321;}
+.timeline .careers .d-2013 .down-arrow {background-color: #B400E6;}
+.timeline .careers .d-2020 .down-arrow {background-color: #00DEFF;}
+
+
+.timeline .careers .d-2006 {
+    position: absolute;
+    top: 107px;
+}
+
+.timeline .careers .d-2008 {
+    position: absolute;
+    top: 214px;
+}
+
+.timeline .careers .d-2009 {
+    position: absolute;
+    top: 321px;
+}
+
+.timeline .careers .d-2013 {
+    position: absolute;
+    top: 428px;
+}
+
+.timeline .careers .d-2020 {
+    position: absolute;
+    top: 535px;
+}
 
 /* End Career Timeline ---------------------------------------------- */
