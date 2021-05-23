@@ -1228,6 +1228,30 @@ body {
     text-align: center;
     margin: 20px;
     margin-top: 50px;
+    position: relative;
+}
+
+.timeline h2:after {
+    content: "";
+    position: absolute;
+    top: 52px;
+    left: 359px;
+    background-color: var(--second-color);
+    width: 390px;
+    height: 2px;
+}
+
+.timeline h2:before {
+    content: "";
+    position: absolute;
+    top: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: var( --second-color) transparent transparent transparent;
+    border-width: 25px;
 }
 
 .timeline .careers {
@@ -1238,11 +1262,95 @@ body {
     border: 1px solid #000;
 }
 
+.timeline .careers .career {
+    position: relative;
+    /* border: 1px solid #000; */
+    width: 100%;
+}
 
+.timeline .careers .career .down-arrow {
+    width: 12px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    clip-path: polygon(50% 7%, 100% 0, 100% 93%, 50% 100%, 0 93%, 0 0);
+    margin-top: -7px;
+}
 
+.timeline .careers .career .l-circle {
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border: 3px solid red;
+    border-radius: 50%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.timeline .careers .career .l-circle .s-circle {
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.timeline .careers .career .line {
+    width: 120px;
+    height: 1px;
+    background-color: red;
+    position: absolute;
+    top: 13px;
+    left: 546px;
+}
 
+.timeline .careers .career .line::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.timeline .careers .career .line::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.timeline .careers .career .date {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+}
+
+.timeline .careers .career .career-text {
+    position: absolute;
+    top: 0px;
+    right: 223px;
+    color: red;
+    width: 250px;
+}
 
 
 /* End Career Timeline ---------------------------------------------- */
