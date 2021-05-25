@@ -146,3 +146,13 @@ body {
 /* End Landing ----------------------------- */
 
 
+/* .header .links ul li:not(:last-child) a::after {
+    content: "";
+    height: 15px;
+    width: 1px;
+    background-color: var(--fourth-color);
+    position: absolute;
+    top: 30px;
+    margin: 2px;
+    margin-left: 4px;
+} */
