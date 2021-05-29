@@ -65,6 +65,13 @@
    </div>
    <!-- Separator------------------------------------------ -->
 
+
+   <!-- Start scroll tp top button------------------------------------------ -->
+   <button id="top-btn" onclick="scrollToTop()" title="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+   </button>
+   <!-- End scroll tp top button------------------------------------------ -->
+
    <!-- Start About Me ------------------------------------------>
    <div class="about-me" id="about-me">
       <div class="container">
@@ -167,15 +174,18 @@
          </div>
 
       </div>
+
+       <!-- Separator------------------------------------------ -->
+      <div class="absolute-wave-2">
+         <img src="images/absolute-wave.png" alt="">
+      </div>
+       <!-- Separator------------------------------------------ -->
+
    </div>
    <!-- End Computer Skills ------------------------------------------>
 
    
-   <!-- Separator------------------------------------------ -->
-   <div class="absolute-wave-2">
-      <img src="images/absolute-wave.png" alt="">
-   </div>
-   <!-- Separator------------------------------------------ -->
+  
 
    <!-- Start work fields ------------------------------------------>
    <div class="work-fields" id="work-fields">
@@ -611,17 +621,26 @@
                <div class="form-bgd">
                   <img src="/images/form-bgd.svg" alt="">
                </div>
+
                <div class="form-man">
                   <img src="/images/form-man.svg" alt="">
+                  <form action="">
+                     <!--  <label for="name">Name</label>
+                     <label for="email">Email</label>
+                     <label for="email">Phone</label>
+                     <label for="message">Message</label> -->
+                     <input type="text" name="name" id="name" placeholder="Your name">
+                     <input type="email" name="email" id="email" placeholder="Email">
+                     <input type="tel" name="tel" id="tel" placeholder="Phone (optional)">
+                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                     <a href="#">Forget Password?</a>
+                     <div>
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                     </div>
+                     <input type="submit" value="Send" id="submit">
+                  </form>
                </div>
-               <form action="">
-                  <input type="text">
-                  <input type="email" name="" id="">
-                  <input type="number" name="" id="">
-                  <textarea name="" id="" cols="30" rows="10"></textarea>
-                  <input type="submit" value="Send">
-                  
-               </form>
             </div>
 
          </div>

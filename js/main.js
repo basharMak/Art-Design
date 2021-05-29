@@ -91,7 +91,27 @@ aboutBtn.onmouseleave = () => {
   aboutBtnIcon.classList.remove('fa-angle-double-right');
 }
 
-// Social icons: ---------
+// Scroll to top button: ---------
+var topBtn = document.querySelector("#top-btn")
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+  scrolling()
+}
+
+function scrolling() {
+  if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topBtn.style.display = "block"
+  } else {
+    topBtn.style.display = "none"
+  }
+}
+
+// when user click on the button
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 
 
