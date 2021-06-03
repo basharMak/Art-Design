@@ -93,18 +93,97 @@
       <div class="social-base"></div>
 
       <div class="social-icons">
-         <a href="#"><img src="/images/so-facebook.svg" alt=""></a>
-         <a href="#"><img src="/images/so-instagram.svg" alt=""></a>
-         <a href="#"><img src="/images/so-behance.svg" alt=""></a>
-         <a href="#"><img src="/images/so-youtube.svg" alt=""></a>
-         <a href="#"><img src="/images/so-whatsapp.svg" alt=""></a>
-         <a href="#"><img src="/images/so-telegram.svg" alt=""></a>
-         <a href="#"><img src="/images/so-painterest.svg" alt=""></a>
+         <a href="#"><img src="images/so-facebook.svg" alt=""></a>
+         <a href="#"><img src="images/so-instagram.svg" alt=""></a>
+         <a href="#"><img src="images/so-behance.svg" alt=""></a>
+         <a href="#"><img src="images/so-youtube.svg" alt=""></a>
+         <a href="#"><img src="images/so-whatsapp.svg" alt=""></a>
+         <a href="#"><img src="images/so-telegram.svg" alt=""></a>
+         <a href="#"><img src="images/so-painterest.svg" alt=""></a>
       </div>
 
    </div>
    <!-- End About Me ------------------------------------------>
    
+
+
+ <!-- Start overlay popups (computer skills)----------------------------------------->
+ <div class="overlay modeling-popup">
+   <div class="popup">
+      <div class="popup-content">
+         <div class="pop-icon"><img src="images/3d-modeling-icon.svg" alt=""></div>
+         <i class="far fa-times-circle"></i>
+         <h5>3D Modeling</h5>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
+         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+      </div>
+   </div>
+</div>
+
+<div class="overlay web-design-popup">
+   <div class="popup">
+      <div class="popup-content">
+         <div class="pop-icon"><img src="images/web-design-icon.svg" alt=""></div>
+         <i class="far fa-times-circle"></i>
+         <h5>Web design</h5>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
+         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+      </div>
+   </div>
+</div>
+
+<div class="overlay web-dev-popup">
+   <div class="popup">
+      <div class="popup-content">
+         <div class="pop-icon"><img src="images/web-dev-icon.svg" alt=""></div>
+         <i class="far fa-times-circle"></i>
+         <h5>Web Development</h5>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
+         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+      </div>
+   </div>
+</div>
+
+<div class="overlay graphic-design-popup">
+   <div class="popup">
+      <div class="popup-content">
+         <div class="pop-icon"><img src="images/graphic-design-icon.svg" alt=""></div>
+         <i class="far fa-times-circle"></i>
+         <h5>Graphic Design</h5>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
+         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+      </div>
+   </div>
+</div>
+
+<div class="overlay video-editing-popup">
+   <div class="popup">
+      <div class="popup-content">
+         <div class="pop-icon"><img src="images/video-editing-icon.svg" alt=""></div>
+         <i class="far fa-times-circle"></i>
+         <h5>Video Editing</h5>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
+         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+      </div>
+   </div>
+</div>
+
+
+<div class="overlay visual-effects-popup">
+   <div class="popup">
+      <div class="popup-content">
+         <div class="pop-icon"><img src="images/visual-effects-icon.svg" alt=""></div>
+         <i class="far fa-times-circle"></i>
+         <h5>Visual Effects</h5>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
+         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+      </div>
+   </div>
+</div>
+
+<!-- End overlay popups (computer skills) ----------------------------------------->
+
+
 
    <!-- Start Computer Skills ------------------------------------------>
    <div class="computer-skills" id="computer-skills">
@@ -115,18 +194,18 @@
          <div class="skills-content">
 
             <div class="left-col">
-               <div class="3d-modeling circle">
-                  <div>
+               <div class="modeling circle" data-skill=".modeling-popup" data-color="#32AEC6">
+                  <div class="inner-c">
                      <img src="images/3d-modeling-icon.svg" alt="">
                   </div>
                </div>
-               <div class="web-design circle mid">
-                  <div>
+               <div class="web-design circle mid" data-skill=".web-design-popup" data-color="#FFCB05">
+                  <div class="inner-c">
                      <img src="images/web-design-icon.svg" alt="">
                   </div>
                </div>
-               <div class="web-dev circle">
-                  <div>
+               <div class="web-dev circle" data-skill=".web-dev-popup" data-color="#EC008C">
+                  <div class="inner-c">
                      <img src="images/web-dev-icon.svg" alt="">
                   </div>
                </div>
@@ -142,7 +221,7 @@
                <div class="indicator-right-3 indicator"></div>
 
                <div class="main-image">
-                  <img src="/images/main-skills-img.svg" alt="">
+                  <img src="images/main-skills-img.svg" alt="">
                   <ul>
                      <li></li>
                      <li></li>
@@ -155,19 +234,19 @@
             </div>
 
             <div class="right-col">
-               <div class="graphic-design circle">
-                  <div>
-                     <img src="/images/graphic-design-icon.svg" alt="">
+               <div class="graphic-design circle" data-skill=".graphic-design-popup" data-color="#92278F">
+                  <div class="inner-c">
+                     <img src="images/graphic-design-icon.svg" alt="">
                   </div>
                </div>
-               <div class="video-editing circle mid">
-                  <div>
-                     <img src="/images/video-editing-icon.svg" alt="">
+               <div class="video-editing circle mid" data-skill=".video-editing-popup" data-color="#5170C2">
+                  <div class="inner-c">
+                     <img src="images/video-editing-icon.svg" alt="">
                   </div>
                </div>
-               <div class="visual-effects circle">
-                  <div>
-                     <img src="/images/visual-effects-icon.svg" alt="">
+               <div class="visual-effects circle" data-skill=".visual-effects-popup" data-color="#F7941E">
+                  <div class="inner-c">
+                     <img src="images/visual-effects-icon.svg" alt="">
                   </div>
                </div>
             </div>
@@ -200,22 +279,22 @@
                <div class="icons">
                   <div class="laser-cut">
                      <div class="laser-cut-bgd">
-                        <img src="/images/laser-cut-icon.svg" alt="">
+                        <img src="images/laser-cut-icon.svg" alt="">
                      </div>
                   </div>
                   <div class="art-works">
                      <div class="art-works-bgd">
-                        <img src="/images/art-works-icon.svg" alt="">
+                        <img src="images/art-works-icon.svg" alt="">
                      </div>
                   </div>
                   <div class="car-wrapping">
                      <div class="car-wrapping-bgd">
-                        <img src="/images/car-wrapping-icon.svg" alt="">
+                        <img src="images/car-wrapping-icon.svg" alt="">
                      </div>
                   </div>
                   <div class="decoration">
                      <div class="decoration-bgd">
-                        <img src="/images/decoration-icon.svg" alt="">
+                        <img src="images/decoration-icon.svg" alt="">
                      </div>
                   </div>
                </div>
@@ -282,7 +361,7 @@
             <!-- ------------------------------------------------------- -->
             
             <div class="col-middle">
-               <img src="/images/main-works-img.svg" alt="">
+               <img src="images/main-works-img.svg" alt="">
                <ul>
                   <li></li>
                   <li></li>
@@ -302,22 +381,22 @@
                <div class="icons">
                   <div class="signboards">
                      <div class="signboards-bgd">
-                        <img src="/images/signboard-icon.svg" alt="">
+                        <img src="images/signboard-icon.svg" alt="">
                      </div>
                   </div>
                   <div class="expo-stands">
                      <div class="expo-stands-bgd">
-                        <img src="/images/expo-icon.svg" alt="">
+                        <img src="images/expo-icon.svg" alt="">
                      </div>
                   </div>
                   <div class="products-stands">
                      <div class="products-stands-bgd">
-                        <img src="/images/stands-icon.svg" alt="">
+                        <img src="images/stands-icon.svg" alt="">
                      </div>
                   </div>
                   <div class="lighted-letters">
                      <div class="lighted-letters-bgd">
-                        <img src="/images/letters-icon.svg" alt="">
+                        <img src="images/letters-icon.svg" alt="">
                      </div>
                   </div>
                </div>
@@ -393,7 +472,7 @@
             
             <div class="career d-2004">
 
-               <div class="line">
+               <div class="line line-r">
                   <div class="date">2004</div>
                   <div class="career-text">
                      <h4>SIGN MAKER</h4>
@@ -406,13 +485,13 @@
                <div class="l-circle">
                   <div class="s-circle"></div>
                </div>
-               <img src="/images/sign-maker.svg" alt="" class="career-icon">
+               <img src="images/sign-maker.svg" alt="" class="career-icon-r">
 
             </div>
 
             <div class="career d-2006">
 
-               <div class="line">
+               <div class="line line-l">
                   <div class="date">2006</div>
                   <div class="career-text">
                      <h4>GRAPHIC DESIGNER</h4>
@@ -425,13 +504,13 @@
                <div class="l-circle">
                   <div class="s-circle"></div>
                </div>
-               <img src="/images/graphic-designer.svg" alt="" class="career-icon">
+               <img src="images/graphic-designer.svg" alt="" class="career-icon-l">
 
             </div>
 
             <div class="career d-2008">
 
-               <div class="line">
+               <div class="line line-r">
                   <div class="date">2008</div>
                   <div class="career-text">
                      <h4>DESIGN SUPERVISOR</h4>
@@ -444,13 +523,13 @@
                <div class="l-circle">
                   <div class="s-circle"></div>
                </div>
-               <img src="/images/design-supervisor.svg" alt="" class="career-icon">
+               <img src="images/design-supervisor.svg" alt="" class="career-icon-r">
 
             </div>
 
             <div class="career d-2009">
 
-               <div class="line">
+               <div class="line line-l">
                   <div class="date">2009</div>
                   <div class="career-text">
                      <h4>CREATIVE DIRECTOR</h4>
@@ -463,13 +542,13 @@
                <div class="l-circle">
                   <div class="s-circle"></div>
                </div>
-               <img src="/images/creative-director.svg" alt="" class="career-icon">
+               <img src="images/creative-director.svg" alt="" class="career-icon-l">
 
             </div>
 
             <div class="career d-2013">
 
-               <div class="line">
+               <div class="line line-r">
                   <div class="date">2013</div>
                   <div class="career-text">
                      <h4>DESIGN DEPARTMENT</h4>
@@ -482,13 +561,13 @@
                <div class="l-circle">
                   <div class="s-circle"></div>
                </div>
-               <img src="/images/design-department.svg" alt="" class="career-icon">
+               <img src="images/design-department.svg" alt="" class="career-icon-r">
 
             </div>
 
             <div class="career d-2020">
 
-               <div class="line">
+               <div class="line line-l">
                   <div class="date">2020</div>
                   <div class="career-text">
                      <h4>UI/UX & WEB DEV</h4>
@@ -501,7 +580,7 @@
                <div class="l-circle">
                   <div class="s-circle"></div>
                </div>
-               <img src="/images/ui-ux-and-web-dev.svg" alt="" class="career-icon">
+               <img src="images/ui-ux-and-web-dev.svg" alt="" class="career-icon-l">
 
             </div>
             
@@ -526,7 +605,7 @@
             
             <div class="testimonial">
                <div class="testi-avatar">
-                  <img src="/images/person-1.svg" alt="">
+                  <img src="images/person-1.svg" alt="">
                </div>
                <div class="testi-text">
                   <h4>Person 1</h4>
@@ -540,7 +619,7 @@
 
             <div class="testimonial">
                <div class="testi-avatar">
-                  <img src="/images/person-2.svg" alt="">
+                  <img src="images/person-2.svg" alt="">
                </div>
                <div class="testi-text">
                   <h4>Person 2</h4>
@@ -554,7 +633,7 @@
 
             <div class="testimonial">
                <div class="testi-avatar">
-                  <img src="/images/person-3.svg" alt="">
+                  <img src="images/person-3.svg" alt="">
                </div>
                <div class="testi-text">
                   <h4>Person 3</h4>
@@ -568,7 +647,7 @@
 
             <div class="testimonial">
                <div class="testi-avatar">
-                  <img src="/images/person-4.svg" alt="">
+                  <img src="images/person-4.svg" alt="">
                </div>
                <div class="testi-text">
                   <h4>Person 4</h4>
@@ -599,7 +678,7 @@
          <div class="contact-content">
             
             <div class="my-info">
-               <img class="my-avatar" src="/images/my-avatar.png" alt="">
+               <img class="my-avatar" src="images/my-avatar.png" alt="">
                <h4>Bashar Maklad</h4>
                <h5>GRAPHIC/UI/UX Design & Web Dev</h5>
                <p>   Lorem Ipsum is simply dummy text
@@ -611,19 +690,19 @@
             <div class="sign-up">
                <div class="sign-up-icons">
                   <h4>Sign up with</h4>
-                  <img src="/images/sign-up-google.svg" alt="">
-                  <img src="/images/sign-up-facebook.svg" alt="">
+                  <img src="images/sign-up-google.svg" alt="">
+                  <img src="images/sign-up-facebook.svg" alt="">
                </div>
                <span>Or</span>
             </div>
 
             <div class="form-content">
                <div class="form-bgd">
-                  <img src="/images/form-bgd.svg" alt="">
+                  <img src="images/form-bgd.svg" alt="">
                </div>
 
                <div class="form-man">
-                  <img src="/images/form-man.svg" alt="">
+                  <img src="images/form-man.svg" alt="">
                   <form action="">
                      <!--  <label for="name">Name</label>
                      <label for="email">Email</label>
@@ -652,8 +731,8 @@
    <!-- Start footer ------------------------------------------>
    <div class="footer">
       <div class="footer-top">
-         <img class="footer-fold" src="/images/footer-fold.svg" alt="">
-         <img class="footer-logo" src="/images/Art-Design-Logo.svg" alt="">
+         <img class="footer-fold" src="images/footer-fold.svg" alt="">
+         <img class="footer-logo" src="images/Art-Design-Logo.svg" alt="">
          <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Computer Skills</a></li>
@@ -664,13 +743,13 @@
          </ul>
 
          <div class="social-icons">
-            <a href="#"><img src="/images/so-facebook.svg" alt=""></a>
-            <a href="#"><img src="/images/so-instagram.svg" alt=""></a>
-            <a href="#"><img src="/images/so-behance.svg" alt=""></a>
-            <a href="#"><img src="/images/so-youtube.svg" alt=""></a>
-            <a href="#"><img src="/images/so-whatsapp.svg" alt=""></a>
-            <a href="#"><img src="/images/so-telegram.svg" alt=""></a>
-            <a href="#"><img src="/images/so-painterest.svg" alt=""></a>
+            <a href="#"><img src="images/so-facebook.svg" alt=""></a>
+            <a href="#"><img src="images/so-instagram.svg" alt=""></a>
+            <a href="#"><img src="images/so-behance.svg" alt=""></a>
+            <a href="#"><img src="images/so-youtube.svg" alt=""></a>
+            <a href="#"><img src="images/so-whatsapp.svg" alt=""></a>
+            <a href="#"><img src="images/so-telegram.svg" alt=""></a>
+            <a href="#"><img src="images/so-painterest.svg" alt=""></a>
          </div>
       </div>
          

@@ -1,8 +1,7 @@
 // collect elements: ==================
 
-
   // header:
-  var links = document.querySelectorAll(".header .links ul li a");
+var links = document.querySelectorAll(".header .links ul li a");
   // intro text:
 var landing = document.querySelector(".landing"),
     introText = document.querySelector(".intro-text"),
@@ -21,7 +20,7 @@ var introMonitor = document.querySelector(".intro-monitor"),
   // about me:
   var aboutBtn = document.querySelector(".about-content .btn"),
       aboutBtnIcon = document.querySelector(".about-content .btn i");
- /*      social = document.querySelector(".about-me .social-icons"),
+/*      social = document.querySelector(".about-me .social-icons"),
       socialIcons = document.querySelectorAll(".about-me .social-icons a img"); */
 
 
@@ -76,8 +75,6 @@ resumeBtn.onmouseleave = () => {
   resumeBtnIcon.classList.remove('fa-angle-double-right');
 }
 
-
-// About me:===========================================================
 // about me button: -----
 aboutBtn.onclick = () => {
   window.open('about.html','_blank');
@@ -96,13 +93,15 @@ var topBtn = document.querySelector("#top-btn")
 
 // Window scrolling:
 window.onscroll = function() {
-  scrolling()
-  aboutSection()
-  skillsSection()
-  workSection()
+  scrolling();
+  aboutSection();
+  skillsSection();
+  workSection();
+  careersSection();
 
 }
 
+// show hide button on scrolling:
 function scrolling() {
   if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     topBtn.style.display = "block"
@@ -117,6 +116,8 @@ function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
 
 
 
@@ -143,6 +144,8 @@ function aboutSection() {
 
   }
 }
+
+
 
 
 // 2- animate computer skills section on window scrolling:
@@ -193,6 +196,8 @@ function skillsSection() {
 }
 
 
+
+
 // 3- animate work fields section on window scrolling:
 let workFields = document.querySelector("#work-fields")
 
@@ -221,5 +226,111 @@ function workSection() {
 
 
 
+// 4- animate careers section on window scrolling:
+let timeline = document.querySelector("#timeline"),
+    careers = document.querySelectorAll(".timeline .careers .career"),
+    careersImgR = document.querySelectorAll(".timeline .careers .career .career-icon-r"),
+    careersImgL = document.querySelectorAll(".timeline .careers .career .career-icon-l"),
+    lineR = document.querySelectorAll(".line-r"),
+    lineL = document.querySelectorAll(".line-l");
+    
+  function careersSection() {
+    let timelineOffsetTop = timeline.offsetTop,
+        timelineOffsetHeight = timeline.offsetHeight,
+        windowHeight = this.innerHeight,
+        windowScrollTop = this.pageYOffset;
+  
+        if(windowScrollTop > timelineOffsetTop + timelineOffsetHeight - windowHeight - 150) {
+          careers.forEach((career, index) => {
+            setTimeout(() => {
+              career.style.opacity = "1";
+              lineR.forEach((lR) => {
+                lR.style.transform = "translateX(-18%)";
+              })
+              lineL.forEach((lL) => {
+                lL.style.transform = "translateX(18%)";
+              })
+              setTimeout(() => {
+                  careersImgR.forEach((imgR) => {
+                    imgR.style.transform = "rotateZ(360deg)";
+                  })
+                  careersImgL.forEach((imgL) => {
+                    imgL.style.transform = "rotateZ(-360deg)";
+                  })
+              },900 * index)
+            
+            },300 * index);
+          });
+        }
+    }
 
 
+
+//===============================================================
+// Computer skills section: --------
+let circlesL = document.querySelectorAll(".computer-skills .skills-content .left-col .circle");
+let circlesR = document.querySelectorAll(".computer-skills .skills-content .right-col .circle");
+let closeBtn = document.querySelectorAll(".overlay .popup .popup-content .fa-times-circle");
+let popIcon = document.querySelectorAll(".overlay .popup .popup-content .pop-icon");
+
+
+
+	// loop on circles Left:----------------
+circlesL.forEach((circle) => {
+
+    //add click event:  
+    circle.addEventListener("click", (e) => {
+      
+      let popup = document.querySelector(e.target.dataset.skill);
+          popup.classList.add("show")
+
+      closeBtn.forEach((mo) => {
+          setTimeout(() => {
+              mo.style.right = "-20px";
+          },50);
+        })
+
+        // close popup bottom function:
+        document.addEventListener("click", (e) => {
+
+          if(e.target.classList.contains("fa-times-circle")) {
+
+              closeBtn.forEach((mo) => {
+                mo.style.right = "700px";
+              })
+              popup.classList.remove("show");
+            }
+        })
+    });
+})
+
+
+
+// loop on circles Right:--------------------
+circlesR.forEach((circle) => {
+
+  //add click event:  
+  circle.addEventListener("click", (e) => {
+    
+    let popup = document.querySelector(e.target.dataset.skill);
+        popup.classList.add("show")
+
+    closeBtn.forEach((mo) => {
+        setTimeout(() => {
+            mo.style.right = "-20px";
+        },50);
+      })
+
+      // close popup bottom function:
+      document.addEventListener("click", (e) => {
+
+        if(e.target.classList.contains("fa-times-circle")) {
+
+            closeBtn.forEach((mo) => {
+              mo.style.right = "700px";
+            })
+            popup.classList.remove("show");
+          }
+      })
+  });
+})
