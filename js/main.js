@@ -271,7 +271,8 @@ let timeline = document.querySelector("#timeline"),
 let circlesL = document.querySelectorAll(".computer-skills .skills-content .left-col .circle");
 let circlesR = document.querySelectorAll(".computer-skills .skills-content .right-col .circle");
 let closeBtn = document.querySelectorAll(".overlay .popup .popup-content .fa-times-circle");
-let popIcon = document.querySelectorAll(".overlay .popup .popup-content .pop-icon");
+let popIcon = document.querySelectorAll(".overlay .popup .pop-icon");
+let skillBullets = document.querySelectorAll(".computer-skills .skills-content .middle-col .main-image ul li")
 
 
 
@@ -290,15 +291,18 @@ circlesL.forEach((circle) => {
           },50);
         })
 
+        document.body.classList.add("stop-scrolling")
+        
         // close popup bottom function:
         document.addEventListener("click", (e) => {
-
           if(e.target.classList.contains("fa-times-circle")) {
 
               closeBtn.forEach((mo) => {
                 mo.style.right = "700px";
               })
               popup.classList.remove("show");
+              // enable window scrolling:
+              document.body.classList.remove("stop-scrolling")
             }
         })
     });
@@ -321,6 +325,9 @@ circlesR.forEach((circle) => {
         },50);
       })
 
+      // disable window scrolling:
+      document.body.classList.add("stop-scrolling")
+
       // close popup bottom function:
       document.addEventListener("click", (e) => {
 
@@ -330,7 +337,39 @@ circlesR.forEach((circle) => {
               mo.style.right = "700px";
             })
             popup.classList.remove("show");
+
+            // enable window scrolling:
+            document.body.classList.remove("stop-scrolling")
           }
       })
   });
 })
+
+
+
+// close popup using escape key:
+let popupEsc = document.querySelectorAll(".overlay")
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    for(var i = 0; i < closeBtn.length; i++) {
+      closeBtn[i].style.right = "700px";
+      popupEsc[i].classList.remove("show");
+      document.body.classList.remove("stop-scrolling")
+    }
+    
+  }
+})
+
+// click any wear to close popup:
+document.addEventListener("click", (e) => {
+  if(!e.target.classList.contains("circle") && e.target.classList.contains("overlay")) {
+    for(var i = 0; i < closeBtn.length; i++) {
+      closeBtn[i].style.right = "700px";
+      popupEsc[i].classList.remove("show");
+      document.body.classList.remove("stop-scrolling")
+    }
+  }
+})
+
+

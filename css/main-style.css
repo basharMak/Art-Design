@@ -32,6 +32,11 @@ body {
     margin-right: auto;
 }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 /* Bootstrap Grid Media */
 /* Small */
 @media (min-width: 768px) {
@@ -78,7 +83,7 @@ body {
     position: fixed;
     right: 40px;
     bottom: 30px;
-    transform: rotateZ(45deg);
+    transform: rotateZ(-135deg);
     transition: 0.3s;
     cursor: pointer;
     z-index: 2100;
@@ -92,53 +97,10 @@ body {
     background-color: #fff;
     color: var(--second-color); 
     border: 1px solid var(--second-color);
+    transform: rotateZ(45deg);
 }
 
 /*End global rules ------------------------------*/
-
-/* classes added by JS ------------------------------*/
-/* .trembling {
-    width: 150px;
-    height: 150px;
-    background: unset;
-    background-color: red;
-    color: red;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    transition: 1s;
-    opacity: 0;
-}
-
-.show {
-    opacity: 1;
-} */
-
-/* .trembling-animate {
-    animation-name: tremble;
-    animation-duration: 1;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes tremble {
-    from {
-        width: 0;
-        height: 0;
-        opacity: 0;
-    };
-    to {
-        width: 150px;
-        height: 150px;
-        opacity: 1;
-    }
-}
- */
-
-
-/* classes added by JS ------------------------------*/
 
 /* Start Header */
 .header {
@@ -664,13 +626,47 @@ body {
     width: 22px;
     height: 22px;
     border-radius: 4px;
-    transition: 0.3s;
+    transition: 0.2s;
     cursor: pointer;
+    position: relative;
+}
+
+/* span tooltip */
+.computer-skills .skills-content .middle-col .main-image ul li span {
+    width: 160px;
+    color: #333;
+    padding: 8px 5px;
+    background-color: #d3d3d3;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #333;
+    border-radius: 6px;
+    display: none;
+}
+
+.computer-skills .skills-content .middle-col .main-image ul li span::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    
 }
 
 .computer-skills .skills-content .middle-col .main-image ul li:hover {
-    opacity: 0.5;
+    height: 20px;
 }
+
+.computer-skills .skills-content .middle-col .main-image ul li:hover span {
+    display: block;
+    opacity: 0.7;
+}
+
 
 /* Indicators ----------------------------------------------*/
 
@@ -906,7 +902,7 @@ body {
 } 
 
 /* popup icon ------ */
-.popup-content>div {
+.popup-content .pop-icon {
     width: 70px;
     height: 70px;
     background-color: #eee;
