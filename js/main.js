@@ -1,7 +1,13 @@
 // collect elements: ==================
 
-  // header:
-var links = document.querySelectorAll(".header .links ul li a");
+  // Header elements:
+var links = document.querySelectorAll(".header .links ul li a"),
+    dropDown = document.querySelector('.header .drop-down-menu'),
+    dropDownClose = document.querySelector('.header .drop-down-menu .x'),
+    dropDownSpan = document.querySelectorAll('.header .drop-down-menu span'),
+    dropDownContent = document.querySelector('.header .drop-down-menu .drop-down-content');
+
+  // Landing elements  
   // intro text:
 var landing = document.querySelector(".landing"),
     introText = document.querySelector(".intro-text"),
@@ -22,6 +28,16 @@ var introMonitor = document.querySelector(".intro-monitor"),
       aboutBtnIcon = document.querySelector(".about-content .btn i");
 /*      social = document.querySelector(".about-me .social-icons"),
       socialIcons = document.querySelectorAll(".about-me .social-icons a img"); */
+
+
+// Handling drop down menu:===========================================================
+dropDown.onclick = function() {
+  dropDownSpan.forEach((span) => {
+    span.classList.toggle("hide");
+  })
+  dropDownClose.classList.toggle("show");
+  dropDownContent.classList.toggle("show");
+}
 
 
 
@@ -283,15 +299,21 @@ circlesL.forEach((circle) => {
     circle.addEventListener("click", (e) => {
       
       let popup = document.querySelector(e.target.dataset.skill);
-          popup.classList.add("show")
+          popup.classList.add("show");
 
+      // move close button:
       closeBtn.forEach((mo) => {
           setTimeout(() => {
               mo.style.right = "-20px";
           },50);
         })
+        
+        // disable window scrolling:
+        document.body.classList.add("stop-scrolling");
 
-        document.body.classList.add("stop-scrolling")
+        // show graphic:
+        graphicMove();
+
         
         // close popup bottom function:
         document.addEventListener("click", (e) => {
@@ -301,8 +323,12 @@ circlesL.forEach((circle) => {
                 mo.style.right = "700px";
               })
               popup.classList.remove("show");
+
+              // clear graphic
+              clearGraphic()
+
               // enable window scrolling:
-              document.body.classList.remove("stop-scrolling")
+              document.body.classList.remove("stop-scrolling");
             }
         })
     });
@@ -317,8 +343,9 @@ circlesR.forEach((circle) => {
   circle.addEventListener("click", (e) => {
     
     let popup = document.querySelector(e.target.dataset.skill);
-        popup.classList.add("show")
-
+        popup.classList.add("show");
+    
+    // move close button:
     closeBtn.forEach((mo) => {
         setTimeout(() => {
             mo.style.right = "-20px";
@@ -326,7 +353,10 @@ circlesR.forEach((circle) => {
       })
 
       // disable window scrolling:
-      document.body.classList.add("stop-scrolling")
+      document.body.classList.add("stop-scrolling");
+
+      // show graphic:
+      graphicMove();
 
       // close popup bottom function:
       document.addEventListener("click", (e) => {
@@ -338,8 +368,11 @@ circlesR.forEach((circle) => {
             })
             popup.classList.remove("show");
 
+            // clear graphic:
+            clearGraphic()
+
             // enable window scrolling:
-            document.body.classList.remove("stop-scrolling")
+            document.body.classList.remove("stop-scrolling");
           }
       })
   });
@@ -347,17 +380,18 @@ circlesR.forEach((circle) => {
 
 
 
-// close popup using escape key:
+// close popup using "escape" key:
 let popupEsc = document.querySelectorAll(".overlay")
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    for(var i = 0; i < closeBtn.length; i++) {
-      closeBtn[i].style.right = "700px";
-      popupEsc[i].classList.remove("show");
-      document.body.classList.remove("stop-scrolling")
-    }
-    
+      for(var i = 0; i < closeBtn.length; i++) {
+        closeBtn[i].style.right = "700px";
+        popupEsc[i].classList.remove("show");
+        document.body.classList.remove("stop-scrolling");
+      }
+     // clear graphic
+     clearGraphic() 
   }
 })
 
@@ -367,9 +401,26 @@ document.addEventListener("click", (e) => {
     for(var i = 0; i < closeBtn.length; i++) {
       closeBtn[i].style.right = "700px";
       popupEsc[i].classList.remove("show");
-      document.body.classList.remove("stop-scrolling")
+      document.body.classList.remove("stop-scrolling");
     }
+    // clear graphic
+    clearGraphic()
   }
 })
 
+
+
+// Show animating popup graphic function:
+let coloredG = document.querySelector(".colored-graphic img");
+function graphicMove() {
+  
+  setTimeout(() => {
+    coloredG.classList.add("colored-graphic-move");
+  },200)
+
+}
+
+function clearGraphic() {
+  coloredG.classList.remove("colored-graphic-move")
+}
 

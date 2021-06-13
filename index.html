@@ -1,39 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Design</title>
-    <link rel="stylesheet" href="css/main-style.css">
-    <!-- make styles normally -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <!-- font awesome library -->
-    <link rel="stylesheet" href="css/all.min.css">
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
-		rel="stylesheet">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Art Design</title>
+   <link rel="stylesheet" href="css/main-style.css">
+   <!-- make styles normally -->
+   <link rel="stylesheet" href="css/normalize.css">
+   <!-- font awesome library -->
+   <link rel="stylesheet" href="css/all.min.css">
+   <!-- google fonts -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
 </head>
 
 <body>
-	<!-- Start Header ------------------------------------------>
-	<div class="header">
-		<div class="container">
-			<img class="logo" src="images/Art-Design-Logo.svg" alt="art-design-logo">
-			<div class="links">
-				<ul>
-					<li><a href="#about-me">About me</a></li>
-					<li><a href="#computer-skills">Computer Skills</a></li>
-					<li><a href="#work-fields">Work Fields</a></li>
-					<li><a href="#timeline">Time Line</a></li>
-					<li><a href="#testimonials">Testimonials</a></li>
-					<li><a href="#contact-me">Contact me</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+   <!-- Start Header ------------------------------------------>
+   <div class="header">
+      <div class="container">
+         <img class="logo" src="images/Art-Design-Logo.svg" alt="art-design-logo">
+         <div class="links">
+            <ul>
+               <li><a href="#about-me">About me</a></li>
+               <li><a href="#computer-skills">Computer Skills</a></li>
+               <li><a href="#work-fields">Work Fields</a></li>
+               <li><a href="#timeline">Time Line</a></li>
+               <li><a href="#testimonials">Testimonials</a></li>
+               <li><a href="#contact-me">Contact me</a></li>
+            </ul>
+         </div>
+         <div class="drop-down-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div class="x"><i class="fas fa-window-close"></i></div>
+            <div class="drop-down-content">
+               <ul>
+                  <li><a href="#about-me">About me</a></li>
+                  <li><a href="#computer-skills">Computer Skills</a></li>
+                  <li><a href="#work-fields">Work Fields</a></li>
+                  <li><a href="#timeline">Time Line</a></li>
+                  <li><a href="#testimonials">Testimonials</a></li>
+                  <li><a href="#contact-me">Contact me</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
    <!-- End Header ------------------------------------------>
-   
+
    <!-- Start Landing ------------------------------------------>
    <div class="landing">
       <div class="container">
@@ -60,7 +77,7 @@
    <!-- End Landing ------------------------------------------>
 
    <!-- Separator------------------------------------------ -->
-   <div class="absolute-wave-1">
+   <div class="absolute-wave-1 landing-wave">
       <img src="images/absolute-wave.png" alt="">
    </div>
    <!-- Separator------------------------------------------ -->
@@ -89,9 +106,6 @@
             </div>
          </div>
       </div>
-
-      <div class="social-base"></div>
-
       <div class="social-icons">
          <a href="#"><img src="images/so-facebook.svg" alt=""></a>
          <a href="#"><img src="images/so-instagram.svg" alt=""></a>
@@ -101,92 +115,113 @@
          <a href="#"><img src="images/so-telegram.svg" alt=""></a>
          <a href="#"><img src="images/so-painterest.svg" alt=""></a>
       </div>
+      <div class="social-base"></div>
+
+
 
    </div>
    <!-- End About Me ------------------------------------------>
-   
 
 
- <!-- Start overlay popups (computer skills)----------------------------------------->
- <div class="overlay modeling-popup">
-   <div class="popup">
-      <div class="popup-content">
-         <div class="pop-icon"><img src="images/3d-modeling-icon.svg" alt=""></div>
-         <i class="far fa-times-circle"></i>
-         <h5>3D Modeling</h5>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
-         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+
+   <!-- Start overlay popups (computer skills)----------------------------------------->
+
+   <div class="overlay modeling-popup">
+      <div class="popup">
+         <div class="popup-content">
+            <div class="pop-icon"><img src="images/3d-modeling-icon.svg" alt=""></div>
+            <i class="far fa-times-circle"></i>
+            <h5>3D Modeling</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque
+               sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet
+               nesciunt temporibus. Cupiditate?</p>
+            <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+         </div>
       </div>
    </div>
-</div>
 
-<div class="overlay web-design-popup">
-   <div class="popup">
-      <div class="popup-content">
-         <div class="pop-icon"><img src="images/web-design-icon.svg" alt=""></div>
-         <i class="far fa-times-circle"></i>
-         <h5>Web design</h5>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
-         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+   <div class="overlay web-design-popup">
+      <div class="popup">
+         <div class="popup-content">
+            <div class="pop-icon"><img src="images/web-design-icon.svg" alt=""></div>
+            <i class="far fa-times-circle"></i>
+            <h5>Web design</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque
+               sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet
+               nesciunt temporibus. Cupiditate?</p>
+            <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+         </div>
       </div>
    </div>
-</div>
 
-<div class="overlay web-dev-popup">
-   <div class="popup">
-      <div class="popup-content">
-         <div class="pop-icon"><img src="images/web-dev-icon.svg" alt=""></div>
-         <i class="far fa-times-circle"></i>
-         <h5>Web Development</h5>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
-         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+   <div class="overlay web-dev-popup">
+      <div class="popup">
+         <div class="popup-content">
+            <div class="pop-icon"><img src="images/web-dev-icon.svg" alt=""></div>
+            <i class="far fa-times-circle"></i>
+            <h5>Web Development</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque
+               sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet
+               nesciunt temporibus. Cupiditate?</p>
+            <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+         </div>
       </div>
    </div>
-</div>
 
-<div class="overlay graphic-design-popup">
-   <div class="popup">
-      <div class="popup-content">
-         <div class="pop-icon"><img src="images/graphic-design-icon.svg" alt=""></div>
-         <i class="far fa-times-circle"></i>
-         <h5>Graphic Design</h5>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
-         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+   <div class="overlay graphic-design-popup">
+      <div class="popup">
+         <div class="popup-content">
+            <div class="pop-icon"><img src="images/graphic-design-icon.svg" alt=""></div>
+            <i class="far fa-times-circle"></i>
+            <h5>Graphic Design</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque
+               sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet
+               nesciunt temporibus. Cupiditate?</p>
+            <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+         </div>
       </div>
    </div>
-</div>
 
-<div class="overlay video-editing-popup">
-   <div class="popup">
-      <div class="popup-content">
-         <div class="pop-icon"><img src="images/video-editing-icon.svg" alt=""></div>
-         <i class="far fa-times-circle"></i>
-         <h5>Video Editing</h5>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
-         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+   <div class="overlay video-editing-popup">
+      <div class="popup">
+         <div class="popup-content">
+            <div class="pop-icon"><img src="images/video-editing-icon.svg" alt=""></div>
+            <i class="far fa-times-circle"></i>
+            <h5>Video Editing</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque
+               sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet
+               nesciunt temporibus. Cupiditate?</p>
+            <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+         </div>
       </div>
    </div>
-</div>
 
 
-<div class="overlay visual-effects-popup">
-   <div class="popup">
-      <div class="popup-content">
-         <div class="pop-icon"><img src="images/visual-effects-icon.svg" alt=""></div>
-         <i class="far fa-times-circle"></i>
-         <h5>Visual Effects</h5>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet nesciunt temporibus. Cupiditate?</p>
-         <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+   <div class="overlay visual-effects-popup">
+      <div class="popup">
+         <div class="popup-content">
+            <div class="pop-icon"><img src="images/visual-effects-icon.svg" alt=""></div>
+            <i class="far fa-times-circle"></i>
+            <h5>Visual Effects</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque doloribus, dolore accusamus magni cumque
+               sequi repellendus recusandae assumenda facere, id perspiciatis soluta laudantium sed ipsam dolores amet
+               nesciunt temporibus. Cupiditate?</p>
+            <button class="popup-btn">Work Gallery <i class="fas fa-angle-double-right"></i></button>
+         </div>
       </div>
    </div>
-</div>
 
-<!-- End overlay popups (computer skills) ----------------------------------------->
+   <!-- End overlay popups (computer skills) ----------------------------------------->
 
 
 
    <!-- Start Computer Skills ------------------------------------------>
    <div class="computer-skills" id="computer-skills">
+
+      <div class="colored-graphic">
+         <img src="images/colored-graphic.svg" alt="">
+      </div>
+
       <div class="container">
 
          <h2>Computer Skills</h2>
@@ -226,9 +261,9 @@
                      <li><span>3D Modeling</span></li>
                      <li><span>Web Design</span></li>
                      <li><span>Web Development</span></li>
-                     <li><span>Graphic Design</span></li>
-                     <li><span>Video Editing</span></li>
                      <li><span>Visual Effects</span></li>
+                     <li><span>Video Editing</span></li>
+                     <li><span>Graphic Design</span></li>
                   </ul>
                </div>
             </div>
@@ -254,17 +289,17 @@
 
       </div>
 
-       <!-- Separator------------------------------------------ -->
-      <div class="absolute-wave-2">
-         <img src="images/absolute-wave.png" alt="">
-      </div>
-       <!-- Separator------------------------------------------ -->
+     
 
    </div>
    <!-- End Computer Skills ------------------------------------------>
 
-   
-  
+   <!-- Separator------------------------------------------ -->
+   <div class="absolute-wave-1">
+      <img src="images/absolute-wave.png" alt="">
+   </div>
+   <!-- Separator------------------------------------------ -->
+
 
    <!-- Start work fields ------------------------------------------>
    <div class="work-fields" id="work-fields">
@@ -313,7 +348,6 @@
                   </div>
                </div>
 
-
                <div class="field art-works">
                   <div>
                      <div class="polygon">
@@ -355,27 +389,27 @@
                      </div>
                   </div>
                </div>
-               
+
             </div>
 
             <!-- ------------------------------------------------------- -->
-            
+
             <div class="col-middle">
                <img src="images/main-works-img.svg" alt="">
                <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <li><span>Laser Cut</span></li>
+                  <li><span>Art Work</span></li>
+                  <li><span>Car Wrapping</span></li>
+                  <li><span>Decoration</span></li>
+                  <li><span>Signboard</span></li>
+                  <li><span>Expo Stands</span></li>
+                  <li><span>Product Stands</span></li>
+                  <li><span>Lighted Letters</span></li>
                </ul>
             </div>
-            
+
             <!-- ------------------------------------------------------- -->
-            <!-- Left Column --------------------->
+            <!-- Right Column --------------------->
             <div class="col-right">
 
                <div class="icons">
@@ -459,17 +493,26 @@
 
             </div>
 
-         </div> <!--fields-->
-      </div> <!--container-->
-   </div> <!--work fields-->
+         </div>
+         <!--fields-->
+      </div>
+      <!--container-->
+   </div>
+   <!--work fields-->
    <!-- End work fields ------------------------------------------>
+
+   <!-- Separator------------------------------------------ -->
+   <div class="absolute-wave-1">
+      <img src="images/absolute-wave.png" alt="">
+   </div>
+   <!-- Separator------------------------------------------ -->
 
    <!-- Start Career Timeline ------------------------------------------>
    <div class="timeline" id="timeline">
       <div class="container">
          <h2>Career Timeline</h2>
-         <div class="careers">
-            
+         <div class="careers" id="careers">
+
             <div class="career d-2004">
 
                <div class="line line-r">
@@ -583,15 +626,83 @@
                <img src="images/ui-ux-and-web-dev.svg" alt="" class="career-icon-l">
 
             </div>
-            
+
+         </div>
+      </div>
+      <!-- career timeline responsive:  -->
+      <div class="careers-res">
+         <div class="container">
+            <h2>Career Timeline</h2>
+            <div class="career">
+               <div class="date">2004</div>
+               <div class="career-text">
+                  <h4>SIGN MAKER</h4>
+                  <p>Lorem Ipsum is simply dummy text
+                     of the printing and typesetting indu
+                     Lorem Ipsum.</p>
+               </div>
+            </div>
+
+            <div class="career">
+               <div class="date">2006</div>
+               <div class="career-text">
+                  <h4>GRAPHIC DESIGNER</h4>
+                  <p>Lorem Ipsum is simply dummy text
+                     of the printing and typesetting indu
+                     Lorem Ipsum.</p>
+               </div>
+            </div>
+
+            <div class="career">
+               <div class="date">2008</div>
+               <div class="career-text">
+                  <h4>DESIGN SUPERVISOR</h4>
+                  <p>Lorem Ipsum is simply dummy text
+                     of the printing and typesetting indu
+                     Lorem Ipsum.</p>
+               </div>
+            </div>
+
+            <div class="career">
+               <div class="date">2009</div>
+               <div class="career-text">
+                  <h4>CREATIVE DIRECTOR</h4>
+                  <p>Lorem Ipsum is simply dummy text
+                     of the printing and typesetting indu
+                     Lorem Ipsum.</p>
+               </div>
+            </div>
+
+            <div class="career">
+               <div class="date">2013</div>
+               <div class="career-text">
+                  <h4>DESIGN DEPARTMENT</h4>
+                  <p>Lorem Ipsum is simply dummy text
+                     of the printing and typesetting indu
+                     Lorem Ipsum.</p>
+               </div>
+            </div>
+
+            <div class="career">
+               <div class="date">2020</div>
+               <div class="career-text">
+                  <h4>UI/UX & WEB DEV</h4>
+                  <p>Lorem Ipsum is simply dummy text
+                     of the printing and typesetting indu
+                     Lorem Ipsum.</p>
+               </div>
+            </div>
+
          </div>
       </div>
    </div>
 
+
+
    <!-- End Career Timeline ------------------------------------------>
 
-     <!-- Separator------------------------------------------ -->
-     <div class="absolute-wave-1">
+   <!-- Separator------------------------------------------ -->
+    <div class="absolute-wave-1">
       <img src="images/absolute-wave.png" alt="">
    </div>
    <!-- Separator------------------------------------------ -->
@@ -666,8 +777,8 @@
 
    <!-- End Testimonial ------------------------------------------>
 
-    <!-- Separator --------------------------------------------->
-    <div class="absolute-wave-1">
+   <!-- Separator --------------------------------------------->
+   <div class="absolute-wave-1">
       <img src="images/absolute-wave.png" alt="">
    </div>
    <!-- Separator --------------------------------------------->
@@ -704,10 +815,6 @@
                <div class="form-man">
                   <img src="images/form-man.svg" alt="">
                   <form action="">
-                     <!--  <label for="name">Name</label>
-                     <label for="email">Email</label>
-                     <label for="email">Phone</label>
-                     <label for="message">Message</label> -->
                      <input type="text" name="name" id="name" placeholder="Your name">
                      <input type="email" name="email" id="email" placeholder="Email">
                      <input type="tel" name="tel" id="tel" placeholder="Phone (optional)">
@@ -726,8 +833,8 @@
       </div>
    </div>
    <!-- End Contact Me ------------------------------------------>
-   
-   
+
+
    <!-- Start footer ------------------------------------------>
    <div class="footer">
       <div class="footer-top">
@@ -766,8 +873,8 @@
    <div class="copy-rights">
       <h3>&copy; <span>Art Design</span> Copyright 2021. <span>All Rights Reserved</span></h3>
    </div>
-   
-   
+
+
    <!-- End footer ------------------------------------------>
 
 
@@ -785,8 +892,9 @@
 
 
 
-	
-	
-	<script src="js/main.js"></script>
+
+
+   <script src="js/main.js"></script>
 </body>
+
 </html>

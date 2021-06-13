@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Fields</title>
+
+    <link rel="stylesheet" href="css/main-style.css">
+
+
+    <style>
+        /* Start Work Fields ---------------------------------------------- */
+.work-fields {
+    margin-top: 250px;
+    /* border: 1px solid #000; */
+    position: relative;
+    overflow: hidden;
+}
+
+.work-fields .container {
+    width: 100vw
+    /* height: 100%; */
+}
+
+.work-fields h2 {
+    color: var(--second-color);
+    font-size: 50px;
+    text-align: center;
+    margin: 20px;
+    margin-top: 30px;
+}
+
+.work-fields .fields {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* left / right columns ---------------------------------------------- */
+.work-fields .fields .col-left,
+.work-fields .fields .col-right {
+    width: 32%;
+    position: relative;
+    margin-bottom: 85px;
+    transition: 2s cubic-bezier(0.47, 0.11, 0, 0.9);
+}
+
+/* this rules is for animate by js ------*/
+.work-fields .fields .col-left {
+    opacity: 0;
+    transform: translateX(-510px)
+}
+
+.work-fields .fields .col-right {
+    opacity: 0;
+    transform: translateX(510px);
+}
+
+
+.work-fields .fields .col-left .field,
+.work-fields .fields .col-right .field {
+    width: 260px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+
+.work-fields .fields .col-left .field {
+    background-color: #eee;
+    background-image: linear-gradient(-90deg, #fff, #d3d3d3);
+    clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
+    margin: 20px 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex: 1;
+}
+
+
+.work-fields .fields .col-right .field {
+    background-color: #eee;
+    background-image: linear-gradient(90deg, #fff, #d3d3d3);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 21% 100%);
+    margin: 20px 0;
+    margin-left:auto;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.work-fields .fields .col-left .laser-cut {
+    margin-left: 60px;
+}
+.work-fields .fields .col-left .decoration {
+    margin-left: 60px;
+}
+
+.work-fields .fields .col-right .signboards {
+    margin-right: 60px;
+}
+.work-fields .fields .col-right .lighted-letters {
+    margin-right: 60px;
+}
+
+.work-fields .fields .col-left .field .polygon,
+.work-fields .fields .col-right .field .polygon {
+    width: 247px;
+    height: 100px;
+}
+
+.work-fields .fields .col-left .field .polygon {
+    margin-right: 4px;
+    background-color: #eee;
+    background-image: linear-gradient(-90deg, #d3d3d3, #fff);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.work-fields .fields .col-right .field .polygon {
+    margin-left: 4px;
+    background-color: #eee;
+    background-image: linear-gradient(90deg, #d3d3d3, #fff);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 21% 100%);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.work-fields .fields .col-left .field .polygon::after,
+.work-fields .fields .col-right .field .polygon::after {
+    content: "";
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.work-fields .fields .col-left .field .polygon::after {
+    left: 19px;
+}
+.work-fields .fields .col-right .field .polygon::after {
+    right: 19px;
+}
+
+.work-fields .fields .col-left .laser-cut .polygon::after {
+    left: 79px;
+}
+
+.work-fields .fields .col-left .decoration .polygon::after {
+    left: 79px;
+}
+
+.work-fields .fields .col-right .signboards .polygon::after{
+    right: 79px;
+}
+
+.work-fields .fields .col-right .lighted-letters .polygon::after{
+    right: 79px;
+}
+
+.work-fields .fields .col-left .field .polygon::before,
+.work-fields .fields .col-right .field .polygon::before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.work-fields .fields .col-left .field .polygon::before {
+    left: 26px;
+}
+.work-fields .fields .col-right .field .polygon::before {
+    right: 26px;
+}
+
+.work-fields .fields .col-left .laser-cut .polygon::before {
+    left: 86px;
+}
+
+.work-fields .fields .col-left .decoration .polygon::before {
+    left: 86px;
+}
+
+
+.work-fields .fields .col-right .signboards .polygon::before {
+    right: 86px;
+}
+
+.work-fields .fields .col-right .lighted-letters .polygon::before {
+    right: 86px;
+}
+
+
+.work-fields .fields .col-left .field .polygon .number,
+.work-fields .fields .col-right .field .polygon .number {
+    width: 27px;
+    height: 27px;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 23px;
+    border-radius: 50%;
+    position: absolute;
+    margin: 6px;
+    z-index: 2;
+}
+
+.work-fields .fields .col-right .field .polygon .number {
+    right: 4px;
+}
+
+.work-fields .fields .col-right .signboards .polygon .number {
+    right: 65px;
+}
+
+.work-fields .fields .col-right .lighted-letters .polygon .number {
+    right: 65px;
+}
+
+
+
+.work-fields .fields .col-left .laser-cut .polygon::after,
+.work-fields .fields .col-left .laser-cut .polygon::before,
+.work-fields .fields .col-left .laser-cut .polygon .number {
+    background-color: #FF0000;
+}
+
+.work-fields .fields .col-left .art-works .polygon::after,
+.work-fields .fields .col-left .art-works .polygon::before,
+.work-fields .fields .col-left .art-works .polygon .number {
+    background-color: #00BC2C;
+}
+
+.work-fields .fields .col-left .car-Wrapping .polygon::after,
+.work-fields .fields .col-left .car-Wrapping .polygon::before,
+.work-fields .fields .col-left .car-Wrapping .polygon .number {
+    background-color: #B400E6;
+}
+
+.work-fields .fields .col-left .decoration .polygon::after,
+.work-fields .fields .col-left .decoration .polygon::before,
+.work-fields .fields .col-left .decoration .polygon .number {
+    background-color: #00DEFF;
+}
+
+
+
+.work-fields .fields .col-right .signboards .polygon::after,
+.work-fields .fields .col-right .signboards .polygon::before,
+.work-fields .fields .col-right .signboards .polygon .number {
+    background-color: #FF00AA;
+}
+
+.work-fields .fields .col-right .expo-stands .polygon::after,
+.work-fields .fields .col-right .expo-stands .polygon::before,
+.work-fields .fields .col-right .expo-stands .polygon .number {
+    background-color: #5200FF;
+}
+
+.work-fields .fields .col-right .products-stands .polygon::after,
+.work-fields .fields .col-right .products-stands .polygon::before,
+.work-fields .fields .col-right .products-stands .polygon .number {
+    background-color: #FF7312;
+}
+
+.work-fields .fields .col-right .lighted-letters .polygon::after,
+.work-fields .fields .col-right .lighted-letters .polygon::before,
+.work-fields .fields .col-right .lighted-letters .polygon .number {
+    background-color: #2EE321;
+}
+
+
+
+
+
+.work-fields .fields .col-left .field .polygon .text {
+    padding-left: 40px;
+    padding-top: 5px;
+}
+
+.work-fields .fields .col-right .field .polygon .text {
+    padding-right: 40px;
+    padding-top: 5px;
+}
+
+.work-fields .fields .col-left .field .polygon .text h4,
+.work-fields .fields .col-right .field .polygon .text h4 {
+    color: #777;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.work-fields .fields .col-left .field .polygon .text h4 {
+    text-align: start;
+}
+.work-fields .fields .col-right .field .polygon .text h4 {
+    text-align: end;
+}
+
+.work-fields .fields .col-left .field .polygon .text p,
+.work-fields .fields .col-right .field .polygon .text p {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #777;
+    width: 80%;
+    margin-top: 3px;
+}
+
+.work-fields .fields .col-left .field .polygon .text p {
+    text-align: start;
+}
+.work-fields .fields .col-right .field .polygon .text p {
+    text-align: right;
+    margin-left: 40px;
+}
+
+.work-fields .fields .col-left .icons,
+.work-fields .fields .col-right .icons {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.work-fields .fields .col-left .icons {
+    left: 197px;
+    padding: 41px 0;
+}
+.work-fields .fields .col-right .icons {
+    right: 197px;
+    padding: 41px 0;
+    padding-left: 75px;
+}
+
+.work-fields .fields .col-right .icons .signboards,
+.work-fields .fields .col-right .icons .lighted-letters {
+    margin-left: -60px;
+}
+
+.work-fields .fields .col-left .icons>div,
+.work-fields .fields .col-right .icons>div {
+    width: 110px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-fields .fields .col-left .icons>div {
+    border-radius: 0px 120px 120px 0px;
+}
+.work-fields .fields .col-right .icons>div {
+    border-radius: 120px 0 0 120px;
+}
+
+.work-fields .fields .col-left .icons>div div,
+.work-fields .fields .col-right .icons>div div {
+    width: 100px;
+    height: 60px;
+}
+
+.work-fields .fields .col-left .icons>div div {
+    border-radius: 0px 120px 120px 0px;
+}
+.work-fields .fields .col-right .icons>div div {
+    border-radius: 120px 0 0 120px;
+}
+
+.work-fields .fields .col-left .icons>div div img,
+.work-fields .fields .col-right .icons>div div img {
+    padding-top: 10px;
+    width: 80px;
+}
+
+.work-fields .fields .col-left .icons>div div img {
+    padding-left: 42px;
+}
+.work-fields .fields .col-right .icons>div div img {
+    padding-right: 42px;
+    margin-left: 15px;
+}
+
+
+.work-fields .fields .col-left .icons .laser-cut {
+    background-image: linear-gradient(45deg, #ff6666, #ffd6d6);
+}
+
+.work-fields .fields .col-left .icons .laser-cut .laser-cut-bgd {
+    background-color: #FF0000;
+}
+
+.work-fields .fields .col-left .icons .art-works {
+    background-image: linear-gradient(45deg, #10ff48, #e0ffe7);
+}
+.work-fields .fields .col-left .icons .art-works .art-works-bgd {
+    background-color: #00BC2C;
+}
+
+.work-fields .fields .col-left .icons .car-wrapping {
+    background-image: linear-gradient(45deg, #cd17ff, #f2c4ff);
+}
+.work-fields .fields .col-left .icons .car-wrapping .car-wrapping-bgd {
+    background-color: #B400E6;
+}
+
+.work-fields .fields .col-left .icons .decoration {
+    background-image: linear-gradient(45deg, #46e6ff, #d0f9ff);
+}
+.work-fields .fields .col-left .icons .decoration .decoration-bgd {
+    background-color: #00DEFF;
+}
+
+
+
+
+.work-fields .fields .col-right .icons .signboards {
+    background-image: linear-gradient(45deg, #ff35bc, #ffc6ec);
+}
+.work-fields .fields .col-right .icons .signboards .signboards-bgd {
+    background-color: #FF00AA;
+}
+
+.work-fields .fields .col-right .icons .expo-stands {
+    background-image: linear-gradient(45deg, #8046ff, #d4c1ff);
+}
+.work-fields .fields .col-right .icons .expo-stands .expo-stands-bgd {
+    background-color: #5200FF;
+}
+
+.work-fields .fields .col-right .icons .products-stands {
+    background-image: linear-gradient(45deg, #ff9e59, #ffdbc2);
+}
+.work-fields .fields .col-right .icons .products-stands .products-stands-bgd {
+    background-color: #FF7312;
+}
+
+.work-fields .fields .col-right .icons .lighted-letters {
+    background-image: linear-gradient(45deg, #5cff50, #cfffcc);
+}
+.work-fields .fields .col-right .icons .lighted-letters .lighted-letters-bgd {
+    background-color: #2EE321;
+}
+
+
+
+/* >>>>>>>>>>>>>> ----------------------------------------------*/
+
+/* Work fields middle column ---------------------------------------------- */
+.work-fields .fields .col-middle {
+    width: 530px;
+    height: 530px;
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px dashed rgba(12, 94, 145, 0.3);
+}
+
+.work-fields .fields .col-middle img {
+    width: 100%;
+    padding: 300px;
+    transition: 1s;
+}
+
+
+.work-fields .fields .col-middle ul {
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.work-fields .fields .col-middle ul li:nth-of-type(1) {
+    background-color: #FF0000;
+}
+.work-fields .fields .col-middle ul li:nth-of-type(2) {
+    background-color: #00BC2C;
+}
+.work-fields .fields .col-middle ul li:nth-of-type(3) {
+    background-color: #B400E6;
+}
+.work-fields .fields .col-middle ul li:nth-of-type(4) {
+    background-color: #00DEFF;
+}
+.work-fields .fields .col-middle ul li:nth-of-type(5) {
+    background-color: #2EE321;
+}
+.work-fields .fields .col-middle ul li:nth-of-type(6) {
+    background-color: #FF7312;
+}
+.work-fields .fields .col-middle ul li:nth-of-type(7) {
+    background-color: #5200FF;
+}
+.work-fields .fields .col-middle ul li:nth-of-type(8) {
+    background-color: #FF00AA;
+}
+
+
+.work-fields .fields .col-middle ul li {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.work-fields .fields .col-middle ul li:hover {
+    height: 20px;
+}
+
+/* span tooltip */
+.work-fields .fields .col-middle ul li span {
+    color: #333;
+    padding: 6px 10px;
+    background-color: #d3d3d3;
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #333;
+    border-radius: 6px;
+    white-space: nowrap;
+    display: none;
+}
+
+.work-fields .fields .col-middle ul li span::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    
+}
+
+.work-fields .fields .col-middle ul li:hover {
+    height: 20px;
+}
+
+.work-fields .fields .col-middle ul li:hover span {
+    display: block;
+    opacity: 0.7;
+}
+
+
+
+
+
+/* Work fields Responsive */
+/* Small */
+@media (max-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (max-width:992px) {
+    .container {
+        width: 95vw;
+    }
+    
+    
+}
+/* Large */
+@media (max-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+
+
+
+/* >>>>>>>>>>>>>> ----------------------------------------------*/
+/* End Work Fields ---------------------------------------------- */
+    </style>
+
+
+
+
+</head>
+<body>
+    <!-- Start work fields ------------------------------------------>
+   <div class="work-fields" id="work-fields">
+    <div class="container">
+       <h2>Work Fields</h2>
+
+       <div class="fields">
+
+          <!-- Left Column --------------------->
+          <div class="col-left">
+
+             <div class="icons">
+                <div class="laser-cut">
+                   <div class="laser-cut-bgd">
+                      <img src="images/laser-cut-icon.svg" alt="">
+                   </div>
+                </div>
+                <div class="art-works">
+                   <div class="art-works-bgd">
+                      <img src="images/art-works-icon.svg" alt="">
+                   </div>
+                </div>
+                <div class="car-wrapping">
+                   <div class="car-wrapping-bgd">
+                      <img src="images/car-wrapping-icon.svg" alt="">
+                   </div>
+                </div>
+                <div class="decoration">
+                   <div class="decoration-bgd">
+                      <img src="images/decoration-icon.svg" alt="">
+                   </div>
+                </div>
+             </div>
+
+             <div class="field laser-cut">
+                <div>
+                   <div class="polygon">
+                      <div class="number">1</div>
+                      <div class="text">
+                         <h4>LASER CUT</h4>
+                         <p>Lorem Ipsum is simply dummy text
+                            of the printing and typesetting indu
+                            Lorem Ipsum.</p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+
+             <div class="field art-works">
+                <div>
+                   <div class="polygon">
+                      <div class="number">2</div>
+                      <div class="text">
+                         <h4>ART WORK</h4>
+                         <p>Lorem Ipsum is simply dummy text
+                            of the printing and typesetting indu
+                            Lorem Ipsum.</p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="field car-Wrapping">
+                <div>
+                   <div class="polygon">
+                      <div class="number">3</div>
+                      <div class="text">
+                         <h4>CAR WRAPPING</h4>
+                         <p>Lorem Ipsum is simply dummy text
+                            of the printing and typesetting indu
+                            Lorem Ipsum.</p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="field decoration">
+                <div>
+                   <div class="polygon">
+                      <div class="number">4</div>
+                      <div class="text">
+                         <h4>DECORATION</h4>
+                         <p>Lorem Ipsum is simply dummy text
+                            of the printing and typesetting indu
+                            Lorem Ipsum.</p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             
+          </div>
+
+          <!-- ------------------------------------------------------- -->
+          
+          <div class="col-middle">
+             <img src="images/main-works-img.svg" alt="">
+             <ul>
+                <li><span>Laser Cut</span></li>
+                <li><span>Art Work</span></li>
+                <li><span>Car Wrapping</span></li>
+                <li><span>Decoration</span></li>
+                <li><span>Signboard</span></li>
+                <li><span>Expo Stands</span></li>
+                <li><span>Product Stands</span></li>
+                <li><span>Lighted Letters</span></li>
+             </ul>
+          </div>
+          
+          <!-- ------------------------------------------------------- -->
+          <!-- Left Column --------------------->
+          <div class="col-right">
+
+             <div class="icons">
+                <div class="signboards">
+                   <div class="signboards-bgd">
+                      <img src="images/signboard-icon.svg" alt="">
+                   </div>
+                </div>
+                <div class="expo-stands">
+                   <div class="expo-stands-bgd">
+                      <img src="images/expo-icon.svg" alt="">
+                   </div>
+                </div>
+                <div class="products-stands">
+                   <div class="products-stands-bgd">
+                      <img src="images/stands-icon.svg" alt="">
+                   </div>
+                </div>
+                <div class="lighted-letters">
+                   <div class="lighted-letters-bgd">
+                      <img src="images/letters-icon.svg" alt="">
+                   </div>
+                </div>
+             </div>
+
+             <div class="field signboards">
+                <div>
+                   <div class="polygon">
+                      <div class="number">5</div>
+                      <div class="text">
+                         <h4>SIGNBOARDS</h4>
+                         <p>Lorem Ipsum is simply dummy text
+                            of the printing and typesetting indu
+                            Lorem Ipsum.</p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="field expo-stands">
+                <div>
+                   <div class="polygon">
+                      <div class="number">6</div>
+                      <div class="text">
+                         <h4>EXPO STANDS</h4>
+                         <p>Lorem Ipsum is simply dummy text
+                            of the printing and typesetting indu
+                            Lorem Ipsum.</p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="field products-stands">
+                <div>
+                   <div class="polygon">
+                      <div class="number">7</div>
+                      <div class="text">
+                         <h4>PRODUCT STANDS</h4>
+                         <p>Lorem Ipsum is simply dummy text
+                            of the printing and typesetting indu
+                            Lorem Ipsum.</p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+             <div class="field lighted-letters">
+                <div>
+                   <div class="polygon">
+                      <div class="number">8</div>
+                      <div class="text">
+                         <h4>LIGHTED LETTERS</h4>
+                         <p>Lorem Ipsum is simply dummy text
+                            of the printing and typesetting indu
+                            Lorem Ipsum.</p>
+                      </div>
+                   </div>
+                </div>
+             </div>
+
+          </div>
+
+       </div> <!--fields-->
+    </div> <!--container-->
+ </div> <!--work fields-->
+ <!-- End work fields ------------------------------------------>
+</body>
+</html>
