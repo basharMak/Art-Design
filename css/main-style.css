@@ -425,6 +425,9 @@ body {
     .landing .intro-monitor {
         display: none;
     }
+    .landing .intro-text {
+        width: 22%;
+    }
 }
 /* Medium */
 @media (max-width:992px) {
