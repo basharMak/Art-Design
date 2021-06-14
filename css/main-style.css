@@ -301,7 +301,15 @@ body {
     .container {
         width: 750px;
     }
-
+    .header .drop-down-menu .drop-down-content {
+        width: 300px;
+    }
+    .header .drop-down-menu .drop-down-content ul {
+        width: 280px;
+    }
+    .header .drop-down-menu .drop-down-content ul li a {
+        width: auto;
+    }
 }
 /* Medium */
 @media (max-width:992px) {
@@ -425,8 +433,12 @@ body {
     .landing .intro-monitor {
         display: none;
     }
-    .landing .intro-text {
-        width: 22%;
+    .landing .intro-text img{
+        width: 50%;
+    }
+    .landing .intro-text h3 {
+        font-size: 14px;
+        width: auto;
     }
 }
 /* Medium */
