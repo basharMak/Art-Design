@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="22px" height="22px" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve">
+<g>
+	<g>
+		<path fill="#32BBED" stroke="#0C5E91" stroke-width="0.15" d="M15.857,4.315l1.432-1.971C15.521,1.06,13.354,0.292,11,0.292v2.438
+			C12.817,2.729,14.492,3.321,15.857,4.315z"/>
+		<path fill="#FFCA09" stroke="#0C5E91" stroke-width="0.15" d="M11,2.729L11,2.729V0.292l0,0c-2.353,0-4.521,0.768-6.288,2.053
+			l1.432,1.971C7.508,3.321,9.183,2.729,11,2.729z"/>
+		<path fill="#32BBED" stroke="#0C5E91" stroke-width="0.15" d="M19.271,10.999c0,0.893-0.146,1.75-0.407,2.557l2.317,0.752
+			c0.339-1.043,0.527-2.152,0.527-3.309c0-1.154-0.188-2.266-0.527-3.307l-2.317,0.752C19.126,9.249,19.271,10.106,19.271,10.999z"
+			/>
+		<path fill="#FFCA09" stroke="#0C5E91" stroke-width="0.15" d="M6.144,4.315L4.712,2.345C2.905,3.659,1.523,5.521,0.818,7.692
+			l2.317,0.752C3.681,6.769,4.747,5.331,6.144,4.315z"/>
+		<path fill="#32BBED" stroke="#0C5E91" stroke-width="0.15" d="M18.864,8.444l2.317-0.752c-0.705-2.172-2.086-4.031-3.893-5.348
+			l-1.432,1.971C17.253,5.331,18.32,6.769,18.864,8.444z"/>
+		<path fill="#32BBED" stroke="#0C5E91" stroke-width="0.15" d="M11,19.271v2.438c2.353,0,4.521-0.768,6.288-2.053l-1.431-1.971
+			C14.492,18.679,12.817,19.271,11,19.271z"/>
+		<path fill="#32BBED" stroke="#0C5E91" stroke-width="0.15" d="M21.182,14.308l-2.317-0.752c-0.545,1.676-1.611,3.113-3.007,4.129
+			l1.431,1.971C19.096,18.339,20.477,16.479,21.182,14.308z"/>
+		<path fill="#FFCA09" stroke="#0C5E91" stroke-width="0.15" d="M2.729,10.999c0-0.893,0.146-1.75,0.407-2.555L0.818,7.692
+			c-0.339,1.041-0.527,2.152-0.527,3.307c0,1.156,0.188,2.268,0.527,3.309l2.317-0.752C2.874,12.751,2.729,11.892,2.729,10.999z"/>
+		<path fill="#FFCA09" stroke="#0C5E91" stroke-width="0.15" d="M11,19.271c-1.817,0-3.492-0.592-4.856-1.586l-1.432,1.971
+			C6.479,20.94,8.647,21.708,11,21.708l0,0V19.271L11,19.271z"/>
+		<path fill="#FFCA09" stroke="#0C5E91" stroke-width="0.15" d="M3.136,13.556l-2.317,0.752c0.705,2.172,2.087,4.033,3.894,5.348
+			l1.432-1.971C4.748,16.669,3.681,15.233,3.136,13.556z"/>
+		<rect x="11" y="11" fill="#FFCA09" stroke="#0C5E91" stroke-width="0.15" width="0" height="0.001"/>
+		<polygon fill="#FFCA09" stroke="#0C5E91" stroke-width="0.15" points="11.001,11.001 11.001,10.999 11,10.999 		"/>
+		<rect x="11" y="11.001" fill="#FFCA09" stroke="#0C5E91" stroke-width="0.15" width="0" height="0"/>
+		<rect x="11" y="10.999" fill="#FFCA09" stroke="#0C5E91" stroke-width="0.15" width="0" height="0"/>
+		<polygon fill="#FFCA09" stroke="#0C5E91" stroke-width="0.15" points="11,10.999 11,10.999 11,10.999 		"/>
+		<polygon fill="#FFCA09" stroke="#0C5E91" stroke-width="0.15" points="11,10.999 11,11.001 11,11.001 		"/>
+	</g>
+	<circle fill="#0C5E91" stroke="#FFFFFF" stroke-width="0.3" cx="11" cy="10.999" r="6.935"/>
+	<text transform="matrix(1 0 0 1 6.2271 12.9072)"><tspan x="0" y="0" fill="#FFFFFF" font-family="'Exo2-Thin'" font-size="6.5439">50</tspan><tspan x="7.264" y="0" fill="#FFFFFF" font-family="'Exo2-Thin'" font-size="3.2465">%</tspan></text>
+</g>
+</svg>

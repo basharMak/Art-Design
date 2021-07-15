@@ -80,7 +80,7 @@ window.onload = function () {
 
 // Resume button: -----
 resumeBtn.onclick = () => {
-  window.open('resume.html','_blank');
+  window.open('./pages/resume.html','_blank');
 }
 
 resumeBtn.onmouseenter = () => {
@@ -93,7 +93,7 @@ resumeBtn.onmouseleave = () => {
 
 // about me button: -----
 aboutBtn.onclick = () => {
-  window.open('about.html','_blank');
+  window.open('./pages/about.html','_blank');
 }
 
 aboutBtn.onmouseenter = () => {
